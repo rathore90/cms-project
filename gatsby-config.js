@@ -49,6 +49,7 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
+      icon: `static\favicon.ico`
     },
   ],
 };
