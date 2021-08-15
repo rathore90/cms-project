@@ -2,7 +2,6 @@
   align-items: flex-end;
   display: flex;
   margin: 0 auto;
-  max-width: var(--size-max-width);
   min-height: 200px;
   padding: 0 0 var(--size-gutter);
   position: relative;
@@ -48,10 +47,6 @@
 }
 
 @media (min-width: 768px) {
-  .hero {
-    padding-top: var(--size-gutter);
-  }
-
   .details {
     max-width: 44rem;
     padding: var(--space-3xl) var(--size-gutter) 0;
