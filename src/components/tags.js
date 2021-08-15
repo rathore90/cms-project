@@ -13,4 +13,6 @@ const Tags = ({ tags }) =>
     </small>
   )
 
+
+
 export default Tags
