@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
+const Seo = ({ description = '', lang = 'en', link='rel="icon" type="image/png" href="http://example.com/myicon.png', meta = [], title, image }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -23,6 +23,7 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
     <Helmet
       htmlAttributes={{
         lang,
+        link
       }}
       title={title}
       defaultTitle={defaultTitle}
