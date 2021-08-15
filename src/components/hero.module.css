@@ -44,26 +44,9 @@
   margin: 0;
 }
 
-@media (min-width: 480px) {
-  .details {
-    padding-top: var(--space-3xl);
-  }
-}
-
-@media (min-width: 768px) {
-  .details {
-    max-width: 44rem;
-    padding: var(--space-3xl) var(--size-gutter) 0;
-  }
-}
 
 @media (min-width: 1024px) {
   .image {
     margin-left: auto;
-  }
-
-  .details {
-    left: var(--size-gutter);
-    padding: var(--space-3xl) var(--size-gutter) 0 0;
   }
 }
