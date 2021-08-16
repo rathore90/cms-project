@@ -7,15 +7,19 @@
   
   .left-container {
     float: left;
-    height: 21vw;
+    height: 25vw;
     width: 50%;
+  }
+
+  .left-content > div{
+    height: auto;
   }
   
   .right-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 21vw;
+    height: 25vw;
     background: #fff;
     width: 50%;
     float: left;
