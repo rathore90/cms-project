@@ -12,7 +12,7 @@ const ArticlePreview = ({ posts }) => {
 
   return (
     <Container>
-      <h1 className={style.blogHeading}>Blogs</h1>
+      <h1 className={styles.blogHeading}>Blogs</h1>
       <ul className={styles.articleList}>
         {posts.map((post) => {
           return (
