@@ -59,7 +59,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: 'https://www.google.com/s2/favicons?domain=www.google.com',
+        icon: `https://www.google.com/s2/favicons?domain=www.google.com`,
       },
     },
   ],
