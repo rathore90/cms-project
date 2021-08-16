@@ -7,7 +7,7 @@ const Container = ({ children, as = 'div' }) => {
     <Tag
       style={{
         margin: '0 auto 2rem',
-        padding: 'var(--space-2xl) var(--size-gutter)',
+        padding: '0 var(--size-gutter) var(--space-2xl)',
       }}
     >
       {children}
