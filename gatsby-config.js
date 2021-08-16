@@ -36,8 +36,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "SAM And SAM Company",
+    description: "Marketing Agency",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
@@ -49,7 +49,18 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
-      icon: `static\favicon.ico`
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: '/static/favicon.ico',
+      },
     },
   ],
 };
