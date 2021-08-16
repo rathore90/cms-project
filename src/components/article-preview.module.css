@@ -7,6 +7,12 @@
   grid-gap: var(--space-3xl);
 }
 
+.blog-heading{
+  text-align: left; 
+  border-bottom: 2px solid #656565; 
+  padding-bottom: 1rem;
+}
+
 .title {
   display: inline-block;
   font-size: var(--text-lg);
