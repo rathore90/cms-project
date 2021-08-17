@@ -19,6 +19,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   )
 
+  const result1 = await graphql(`
+    query {
+      allSamplePages {
+        edges {
+          node {
+            slug
+            title
+          }
+        }
+      }
+    }
+  `)
+
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your Contentful posts`,
@@ -27,7 +40,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
+
+  // if (result1.errors) {
+  //   reporter.panicOnBuild(
+  //     `There was an error loading your Contentful posts`,
+  //     result.errors
+  //   )
+  //   return
+  // }
+
   const posts = result.data.allContentfulBlogPost.nodes
+
+  result1.data.allSamplePages.edges.forEach(edge => {
+    createPage({
+      path: `${edge.node.slug}`,
+      component: blogPostTemplate,
+      context: {
+        title: edge.node.title,
+      },
+    })
+  })
+
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful

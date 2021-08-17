@@ -6,16 +6,16 @@ import './second-section.css'
 
 const SecondSection = ({ heading, subheading,  content, image }) => (
 
-<div class="how-container">
-    <div class="left-container">
-        <div class="left-content">
+<div className="how-container">
+        <div className="left-container">
+            <div className="left-content">
         {image && (
             <GatsbyImage className={styles.image} alt={subheading} image={image} />
             )}
         </div>
     </div>
-    <div class="right-container">
-        <div class="right-content">
+        <div className="right-container">
+            <div className="right-content">
             <h4>{heading}</h4>
             <p>{content}</p>
         </div>
