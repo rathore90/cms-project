@@ -21,13 +21,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result1 = await graphql(`
     query {
-      allSamplePages {
-        edges {
-          node {
-            slug
-            title
+      allSitePage {
+        edges{
+          node{
+            id
           }
-        }
+        } 
       }
     }
   `)
@@ -50,15 +49,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // }
 
   const posts = result.data.allContentfulBlogPost.nodes
-
-  result1.data.allSamplePages.edges.forEach(edge => {
-    createPage({
-      path: `${edge.node.slug}`,
-      component: blogPostTemplate,
-      context: {
-        title: edge.node.title,
-      },
-    })
+  {result1}
+  result1.data.allSitePage.edges.forEach(edge => {
+    {edge}
+    // createPage({
+    //   path: `${edge.nodes.slug}`,
+    //   context: {
+    //     title: edge.nodes.title,
+    //   },
+    // })
   })
 
 
