@@ -3,9 +3,16 @@ import '../../static/contact.css';
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 class ContactIndex extends React.Component {
-  
+  componentDidMount(){
+    AOS.init({
+      duration : 2000
+    })
+  }
+
   render() {
     return (
       <Layout location={this.props.location}>
@@ -45,6 +52,10 @@ class ContactIndex extends React.Component {
               </div>
             </div>
           </div>
+
+        <div data-aos='fade-up'>
+          Helloooo!
+        </div>
       </Layout>
     )
   }

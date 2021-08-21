@@ -6,8 +6,15 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import SecondSection from '../components/second-section'
 import ArticlePreview from '../components/article-preview'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 class RootIndex extends React.Component {
+  componentDidMount(){
+    AOS.init({
+      duration : 800
+    })
+  }
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
